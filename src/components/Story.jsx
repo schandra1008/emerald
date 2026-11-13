@@ -74,6 +74,8 @@ export const Story = () => (
             <img
               src={IMAGES.charcoalFlame}
               alt="Live charcoal grill at Emerald"
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#050807]/80 via-transparent to-transparent" />
@@ -88,6 +90,8 @@ export const Story = () => (
             <img
               src={IMAGES.dubaiNight}
               alt="Dubai at night"
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#050807]/80 via-transparent to-transparent" />

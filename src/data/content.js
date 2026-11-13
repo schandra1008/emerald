@@ -1,20 +1,15 @@
+const unsplash = (id, w = 1200) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=70`;
+
 export const IMAGES = {
-  heroDish:
-    "https://images.unsplash.com/photo-1781334266250-a7e72fdf539f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwY2hpY2tlbiUyMHNoYXdhcm1hJTIwYmlyeWFuaSUyMG1pZGRsZSUyMGVhc3Rlcm4lMjBmb29kJTIwZmVhc3R8ZW58MHx8fHwxNzk0MzM0ODgzfDA&ixlib=rb-4.1.0&q=85",
-  charcoalChicken:
-    "https://images.unsplash.com/photo-1777891258069-454e66f8bedc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxncmlsbGVkJTIwY2hpY2tlbiUyMGZlYXN0fGVufDB8fHx8MTc5NDMzNDg5NXww&ixlib=rb-4.1.0&q=85",
-  charcoalFlame:
-    "https://images.unsplash.com/photo-1621790404813-df280c2de418?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwzfHxncmlsbGVkJTIwY2hpY2tlbiUyMGZlYXN0fGVufDB8fHx8MTc5NDMzNDg5NXww&ixlib=rb-4.1.0&q=85",
-  mixedGrill:
-    "https://images.unsplash.com/photo-1696950169630-05908933017f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw0fHxncmlsbGVkJTIwY2hpY2tlbiUyMHNoYXdhcm1hJTIwYmlyeWFuaSUyMG1pZGRsZSUyMGVhc3Rlcm4lMjBmb29kJTIwZmVhc3R8ZW58MHx8fHwxNzk0MzM0ODgzfDA&ixlib=rb-4.1.0&q=85",
-  kabsa:
-    "https://images.unsplash.com/photo-1593787614841-5d53fca8a33d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwzfHxncmlsbGVkJTIwY2hpY2tlbiUyMHNoYXdhcm1hJTIwYmlyeWFuaSUyMG1pZGRsZSUyMGVhc3Rlcm4lMjBmb29kJTIwZmVhc3R8ZW58MHx8fHwxNzk0MzM0ODgzfDA&ixlib=rb-4.1.0&q=85",
-  burrito:
-    "https://images.unsplash.com/photo-1532550907401-a500c9a57435?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxncmlsbGVkJTIwY2hpY2tlbiUyMGZlYXN0fGVufDB8fHx8MTc5NDMzNDg5NXww&ixlib=rb-4.1.0&q=85",
-  marina:
-    "https://images.unsplash.com/photo-1771335281840-44e1efce214f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwzfHxnb3VybWV0JTIwYnVyZ2VyJTIwYnVycml0byUyMGZyaWVzJTIwZHViYWklMjBtYXJpbmElMjBsdXh1cnklMjBkaW5pbmclMjB0YWJsZXxlbnwwfHx8fDE3OTQzMzQ4OTF8MA&ixlib=rb-4.1.0&q=85",
-  dubaiNight:
-    "https://images.unsplash.com/photo-1603783033071-551d35a9a29f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHw0fHxnb3VybWV0JTIwYnVyZ2VyJTIwYnVycml0byUyMGZyaWVzJTIwZHViYWklMjBtYXJpbmElMjBsdXh1cnklMjBkaW5pbmclMjB0YWJsZXxlbnwwfHx8fDE3OTQzMzQ4OTF8MA&ixlib=rb-4.1.0&q=85",
+  heroDish: unsplash("photo-1781334266250-a7e72fdf539f", 1400),
+  charcoalChicken: unsplash("photo-1777891258069-454e66f8bedc"),
+  charcoalFlame: unsplash("photo-1621790404813-df280c2de418"),
+  mixedGrill: unsplash("photo-1696950169630-05908933017f"),
+  kabsa: unsplash("photo-1593787614841-5d53fca8a33d"),
+  burrito: unsplash("photo-1532550907401-a500c9a57435"),
+  marina: unsplash("photo-1771335281840-44e1efce214f"),
+  dubaiNight: unsplash("photo-1603783033071-551d35a9a29f"),
 };
 
 export const PHONE_DISPLAY = "+971 54 234 6580";

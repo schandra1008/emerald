@@ -27,6 +27,8 @@ export const Locations = () => (
                 <img
                   src={loc.img}
                   alt={loc.name}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d1310] via-[#050807]/20 to-transparent" />

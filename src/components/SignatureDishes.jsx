@@ -46,6 +46,8 @@ export const SignatureDishes = () => {
                   <img
                     src={dish.img}
                     alt={dish.name}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0d1310] via-transparent to-transparent" />
@@ -90,7 +92,7 @@ export const SignatureDishes = () => {
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="relative h-64 sm:h-72">
-                <img src={active.img} alt={active.name} className="h-full w-full object-cover" />
+                <img src={active.img} alt={active.name} decoding="async" className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d1310] via-transparent to-transparent" />
                 <button
                   data-testid="dish-modal-close"

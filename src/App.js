@@ -17,14 +17,28 @@ import { Footer } from "@/components/Footer";
 
 function App() {
   useEffect(() => {
-    const lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    if (prefersReducedMotion || coarsePointer) {
+      setLenis(null);
+      return undefined;
+    }
+
+    const lenis = new Lenis({
+      duration: 0.75,
+      smoothWheel: true,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1.4,
+    });
     setLenis(lenis);
+
     let rafId;
     const raf = (time) => {
       lenis.raf(time);
       rafId = requestAnimationFrame(raf);
     };
     rafId = requestAnimationFrame(raf);
+
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
@@ -34,7 +48,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#050807] font-sans text-[#fcfbf7] antialiased">
-      <div className="grain-overlay" aria-hidden="true" />
+      <div className="grain-overlay hidden md:block" aria-hidden="true" />
       <Navbar />
       <main>
         <Hero />

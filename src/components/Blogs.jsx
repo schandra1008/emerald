@@ -38,6 +38,8 @@ export const Blogs = () => {
                   <img
                     src={post.img}
                     alt={post.title}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0d1310] via-transparent to-transparent" />
@@ -81,7 +83,7 @@ export const Blogs = () => {
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="relative h-60">
-                <img src={active.img} alt={active.title} className="h-full w-full object-cover" />
+                <img src={active.img} alt={active.title} decoding="async" className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d1310] via-transparent to-transparent" />
                 <button
                   data-testid="blog-modal-close"

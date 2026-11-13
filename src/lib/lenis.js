@@ -6,7 +6,7 @@ export const setLenis = (instance) => {
 
 export const scrollToId = (target) => {
   if (lenisInstance) {
-    lenisInstance.scrollTo(target, { offset: -72, duration: 1.4 });
+    lenisInstance.scrollTo(target, { offset: -72, duration: 0.9 });
   } else {
     document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
   }
